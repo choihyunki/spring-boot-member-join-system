@@ -1,14 +1,16 @@
-package com.example.one_hour_project.member.repository.service;
+package com.example.one_hour_project.member.service;
 
 
-import com.example.one_hour_project.member.repository.controller.dto.JoinRequest;
-import com.example.one_hour_project.member.repository.repository.entity.Member;
-import com.example.one_hour_project.member.repository.repository.entity.MemberRepository;
+import com.example.one_hour_project.member.controller.dto.JoinRequest;
+import com.example.one_hour_project.member.entity.Member;
+import com.example.one_hour_project.member.repository.MemberRepository;
+import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 @Service
 @RequiredArgsConstructor
+@Transactional
 public class MemberServiceImpl implements MemberService {
 
     private final MemberRepository memberRepository;

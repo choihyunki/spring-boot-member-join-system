@@ -1,10 +1,10 @@
-package com.example.one_hour_project.member.repository.controller.dto;
+package com.example.one_hour_project.member.controller.dto;
 
 import lombok.Data;
 
 @Data
 public class JoinRequest {
-    private String id;
+    private Long id;
 
     private String name;
 

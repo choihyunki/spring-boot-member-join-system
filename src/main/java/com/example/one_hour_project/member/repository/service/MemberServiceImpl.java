@@ -25,4 +25,9 @@ public class MemberServiceImpl implements MemberService {
 
        return "success";
     }
+
+    @Override
+    public void addAttribute(String success, boolean b) {
+
+    }
 }

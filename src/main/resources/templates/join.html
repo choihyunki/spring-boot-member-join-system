@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>회원가입</h1>
+<form th:action="@{/join}" th:object="${joinRequest}" method="post">
+    <label for="username">이름:</label>
+    <input type="text" id="username" th:field="*{id}" /><br>
+
+    <label for="name">아이디:</label>
+    <input type="text" id="name" th:field="*{name}" /><br>
+
+    <label for="phoneNumber">전화번호:</label>
+    <input type="text" id="phoneNumber" th:field="*{phoneNumber}" /><br>
+
+    <button type="submit">회원가입</button>
+</form>
+<div th:if="${success}">
+    회원가입이 성공했습니다!
+</div>
+<div th:if="${success == false}">
+    회원가입에 실패했습니다!
+</div>
+</body>
+</html>
